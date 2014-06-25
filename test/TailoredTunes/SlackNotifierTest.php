@@ -1,8 +1,7 @@
 <?php
+namespace TailoredTunes;
 
-use TailoredTunes\SlackNotifier;
-
-class SlackNotifierTest extends PHPUnit_Framework_TestCase
+class SlackNotifierTest extends \PHPUnit_Framework_TestCase
 {
 
     /**

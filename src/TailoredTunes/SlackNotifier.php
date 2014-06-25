@@ -13,7 +13,7 @@ class SlackNotifier
     /**
      * @param $endpoint string Slack webhook endpoint
      */
-    function __construct($endpoint)
+    public function __construct($endpoint)
     {
         $this->endpoint = $endpoint;
     }
@@ -71,9 +71,13 @@ class SlackNotifier
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
         curl_setopt($ch, CURLOPT_POSTFIELDS, $slackMsg);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+        curl_setopt(
+            $ch,
+            CURLOPT_HTTPHEADER,
+            array(
                 'Content-Type: application/json',
-                'Content-Length: ' . strlen($slackMsg))
+                'Content-Length: ' . strlen($slackMsg)
+            )
         );
         curl_exec($ch);
     }

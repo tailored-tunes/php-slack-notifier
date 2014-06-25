@@ -6,5 +6,7 @@ php:
 install:
    - composer install --dev
 
-script: phpunit --bootstrap test/bootstrap.php test/
+script:
+  - ./vendor/bin/phpcs --standard=PSR2 src/ test/
+  - phpunit --bootstrap test/bootstrap.php test/
 
