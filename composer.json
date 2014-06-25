@@ -3,6 +3,7 @@
 	"description": "A slack adapter",
 	"type": "library",
 	"keywords": ["slack", "notification"],
+	"license": "GPLV2",
 	"authors": [
 		{
 			"name": "Meza",
